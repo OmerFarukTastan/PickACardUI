@@ -1,0 +1,17 @@
+﻿<Window x:Class="PickACardUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PickACardUI"
+        mc:Ignorable="d"
+        Title="Card Picker" Height="300" Width="800">
+    <Grid>
+        <ListBox x:Name="listOfCards" Margin="492,0,0,0" FontSize="20" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button Content="Pick some cards" HorizontalAlignment="Left" Margin="178,191,0,0" VerticalAlignment="Top" Height="25" Width="140" FontSize="18" Click="listOfCards_Click"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Height="155" Width="477" >
+            <Label Content="How many cards should i pick ?" Width="370" FontSize="24" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+            <Slider x:Name="numberOfCards" Height="29" FontSize="18" Maximum="15" Minimum="1" Foreground="Black" IsSnapToTickEnabled="True" TickPlacement="BottomRight" VerticalContentAlignment="Center" VerticalAlignment="Center" AutoToolTipPlacement="TopLeft"/>
+        </StackPanel>
+    </Grid>
+</Window>
